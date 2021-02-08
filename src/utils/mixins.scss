@@ -1,0 +1,10 @@
+@mixin back-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin position {
+  display: flex;
+  flex-direction: column;
+}

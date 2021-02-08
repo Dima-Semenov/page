@@ -1,0 +1,109 @@
+@import '../utils/mixins.scss';
+
+.content {
+  @include position;
+  margin-left: 100px;
+  height: 808px;
+
+  overflow-y: scroll;
+
+  &__wraper {
+    margin-bottom: 60px;
+    margin-right: 77px;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 544px;
+    border-radius: 24px;
+    object-fit: cover;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 96px 64px 42px;
+
+    &-icon {
+      width: 84px;
+      height: 75px;
+      transition-duration: .7s;
+
+      &:hover {
+        transform: scale(1.2) rotate(360deg);
+        cursor: pointer;
+      }
+    }
+
+    @for $i from 1 through 2 {
+      &-#{$i} {
+        background: url("../Image/item#{$i}.png");
+        @include back-photo;
+      }
+    }
+
+    &-title {
+      @include position;
+      justify-content: space-between;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .content {
+    margin: 0 21px;
+    overflow-y: hidden;
+  
+    &__wraper {
+      margin-right: 0;
+    }
+
+    &__photo {
+      height: 274px;
+      padding: 21px 42px 41px 20px;
+
+      &-icon {
+        width: 58px;
+        height: 54px;
+      }
+
+      &-text {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    height: 400px;
+    &__wraper {
+      margin-bottom: 20px;
+    }
+
+    &__photo {
+      font-size: 12px;
+      padding: 10px;
+      height: 150px;
+
+      &-text {
+        font-size: 10px;
+        margin: 0;
+      }
+
+      &-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

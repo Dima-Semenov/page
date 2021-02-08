@@ -1,0 +1,52 @@
+@import './utils/mixins.scss';
+
+.app {
+  &__photo {
+    cursor: pointer;
+
+    @for $i from 1 through 3 {
+      &-#{$i} {
+          @include back-photo;
+          width: 48px;
+          height: 48px;
+          background-image: url("./Image/#{$i}.svg");
+      }
+    }
+  }
+
+  &__icons {
+    @include position;
+    align-items: center;
+    padding-top: 127px;
+  }
+
+  &__icon {
+    margin-bottom: 75px;
+    position: relative;
+
+    &-active {
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 48px;
+        left: -56px;
+        background-color: #8964D7;
+      }
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 48px;
+      left: -56px;
+      background-color: #8964D7;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

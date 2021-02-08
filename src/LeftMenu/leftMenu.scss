@@ -1,0 +1,26 @@
+@import "../utils/vars.scss";
+
+.app__left-container {
+  width: 160px;
+  height: 100vh;
+
+  background: $menu-color;
+}
+
+@media screen and (max-width: 999px) {
+  .app {
+
+    &__left-container {
+      width: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .app {
+
+    &__left-container {
+      width: 80px;
+    }
+  }
+}

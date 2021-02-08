@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #FFF4EE;
+  overflow: hidden;
+}
+
+ul, h1, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 23px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2CBBF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
+}
+
+
+@media screen and (max-width: 999px) {
+  body {
+    overflow: visible;
+  }
+}
